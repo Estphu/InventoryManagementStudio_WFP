@@ -22,3 +22,21 @@ select * from tblUser
 set nocount on;
 select t1.UserName,t1.FullName,t1.Pass,t1.Mobile,t1.City,t1.Country,t2.RoleName from tblUser as t1 with(nolock)
 inner join tblRole as t2 with(nolock) on t2.RoleID=t1.RoleID
+
+create table tblCustomer (
+ID int identity(1,1) Primary Key,
+CustomerName nvarChar(50),
+[Address] nvarChar(50),
+Mobile nvarChar(11),
+)
+
+insert into tblCustomer(CustomerName,[Address],Mobile) values (@CustomerName,@Address,@Mobile)
+
+select ID, CustomerName,Address,Mobile from tblCustomer
+
+create table tblCategory (
+ID int identity(1,1) Primary Key,
+CategoryName nvarChar(50),
+)
+insert into tblCategory(CategoryName) values (@CategoryName)
+select ID, CategoryName from tblCategory

@@ -130,6 +130,7 @@ namespace Inventory_Management_System_017
             this.home_btn.TabIndex = 14;
             this.home_btn.Text = "HOME";
             this.home_btn.UseVisualStyleBackColor = true;
+            this.home_btn.Click += new System.EventHandler(this.home_btn_Click);
             // 
             // rCountry_txt
             // 
@@ -271,8 +272,10 @@ namespace Inventory_Management_System_017
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "NewRegistration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Registration";
             this.Load += new System.EventHandler(this.NewRegistration_Load);
             this.groupBox1.ResumeLayout(false);

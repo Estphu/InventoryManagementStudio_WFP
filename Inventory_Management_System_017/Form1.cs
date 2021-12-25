@@ -41,14 +41,37 @@ namespace Inventory_Management_System_017
             if (dt.Rows.Count >= 1)
             {
                 userName = txtUserName.Text;
-                Dashboard dashboard = new Dashboard();
-                dashboard.ShowDialog();
                 this.Hide();
+                Dashboard d = new Dashboard();
+                d.Closed += (s, args) => this.Hide();
+                d.Show();
             }
             else
             {
                 MessageBox.Show("Failed");
             }
+        }
+
+        private void login_pg_Load(object sender, EventArgs e)
+        {
+            // for efficient access to other forms
+            txtPassword.UseSystemPasswordChar = true;
+            txtUserName.Text = "admin";
+            txtPassword.Text = "admin";
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+                
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+                
         }
     }
 }

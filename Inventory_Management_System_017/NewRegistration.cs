@@ -140,5 +140,13 @@ namespace Inventory_Management_System_017
                 MessageBox.Show("Username not valid!");
             }
         }
+
+        private void home_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard d = new Dashboard();
+            d.Closed += (s, args) => this.Hide();
+            d.Show();
+        }
     }
 }

@@ -72,18 +72,21 @@ namespace Inventory_Management_System_017
             this.manageUserToolStripMenuItem.Name = "manageUserToolStripMenuItem";
             this.manageUserToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.manageUserToolStripMenuItem.Text = "Manage User";
+            this.manageUserToolStripMenuItem.Click += new System.EventHandler(this.manageUserToolStripMenuItem_Click);
             // 
             // productToolStripMenuItem
             // 
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
             this.productToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.productToolStripMenuItem.Text = "Customer";
+            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // itemToolStripMenuItem
             // 
             this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
-            this.itemToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.itemToolStripMenuItem.Text = "Product";
+            this.itemToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.itemToolStripMenuItem.Text = "Category";
+            this.itemToolStripMenuItem.Click += new System.EventHandler(this.itemToolStripMenuItem_Click);
             // 
             // orderToolStripMenuItem
             // 
@@ -117,6 +120,7 @@ namespace Inventory_Management_System_017
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

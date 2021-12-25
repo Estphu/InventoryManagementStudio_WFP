@@ -10,3 +10,5 @@ C:\Users\ESTPHU\source\repos\Inventory_Management_System_017\Inventory_Managemen
 C:\Users\ESTPHU\source\repos\Inventory_Management_System_017\Inventory_Management_System_017\obj\Debug\Inventory_Management_System_017.pdb
 C:\Users\ESTPHU\source\repos\Inventory_Management_System_017\Inventory_Management_System_017\obj\Debug\Inventory_Management_System_017.NewRegistration.resources
 C:\Users\ESTPHU\source\repos\Inventory_Management_System_017\Inventory_Management_System_017\obj\Debug\Inventory_Management_System_017.Dashboard.resources
+C:\Users\ESTPHU\source\repos\Inventory_Management_System_017\Inventory_Management_System_017\obj\Debug\Inventory_Management_System_017.Customer.resources
+C:\Users\ESTPHU\source\repos\Inventory_Management_System_017\Inventory_Management_System_017\obj\Debug\Inventory_Management_System_017.Category.resources
