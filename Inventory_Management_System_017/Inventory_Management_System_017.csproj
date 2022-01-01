@@ -70,14 +70,55 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InventoryProject00DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryProject00DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IslamabadWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IslamabadWarehouse.Designer.cs">
+      <DependentUpon>IslamabadWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KarachiWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KarachiWarehouse.Designer.cs">
+      <DependentUpon>KarachiWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LahoreWareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LahoreWareHouse.Designer.cs">
+      <DependentUpon>LahoreWareHouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewRegistration.Designer.cs">
       <DependentUpon>NewRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuettaWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuettaWarehouse.Designer.cs">
+      <DependentUpon>QuettaWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouses.Designer.cs">
+      <DependentUpon>Warehouses.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,8 +131,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IslamabadWarehouse.resx">
+      <DependentUpon>IslamabadWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KarachiWarehouse.resx">
+      <DependentUpon>KarachiWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LahoreWareHouse.resx">
+      <DependentUpon>LahoreWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewRegistration.resx">
       <DependentUpon>NewRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,6 +156,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuettaWarehouse.resx">
+      <DependentUpon>QuettaWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouses.resx">
+      <DependentUpon>Warehouses.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="InventoryProject00DataSet.xsc">
+      <DependentUpon>InventoryProject00DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryProject00DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryProject00DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryProject00DataSet.xss">
+      <DependentUpon>InventoryProject00DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

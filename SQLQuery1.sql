@@ -40,3 +40,20 @@ CategoryName nvarChar(50),
 )
 insert into tblCategory(CategoryName) values (@CategoryName)
 select ID, CategoryName from tblCategory
+
+create table tblProduct (
+ID int identity(1,1) Primary Key,
+ProductCode int,
+ProductName nvarChar(50),
+ProductAmount int,
+ProductStatus nvarChar(10),
+SelectedWarehouse nvarChar(50) 
+)
+
+insert into tblProduct(ProductCode,ProductName,ProductAmount,ProductStatus,SelectedWarehouse) values (@ProductCode,@ProductName,@ProductAmount,@ProductStatus,@SelectedWarehouse)
+select ID, ProductCode, ProductName, ProductAmount, ProductStatus, SelectedWarehouse from tblProduct
+
+create table tblWarehouse (
+ID int identity(1,1) Primary Key,
+Warehouses nvarchar(50)
+)

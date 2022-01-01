@@ -50,7 +50,7 @@ namespace Inventory_Management_System_017
         {
             SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=InventoryProject00;Integrated Security=True");
             conn.Open();
-            SqlCommand cmd = new SqlCommand("set nocount on; select t1.FullName as [Full Name], t1.UserName as [User Name], t1.Pass as Password, t1.Mobile, t1.City, t1.Country, t2.RoleName from tblUser as t1 with(nolock) inner join tblRole as t2 with(nolock) on t2.RoleID = t1.RoleID", conn);
+            SqlCommand cmd = new SqlCommand("set nocount on; select t1.ID, t1.FullName as [Full Name], t1.UserName as [User Name], t1.Pass as Password, t1.Mobile, t1.City, t1.Country, t2.RoleName from tblUser as t1 with(nolock) inner join tblRole as t2 with(nolock) on t2.RoleID = t1.RoleID", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

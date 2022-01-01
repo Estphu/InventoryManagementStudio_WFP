@@ -30,92 +30,132 @@ namespace Inventory_Management_System_017
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.manageUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RegistrationInterface = new System.Windows.Forms.ToolStripMenuItem();
+            this.CustomerInterface = new System.Windows.Forms.ToolStripMenuItem();
+            this.WarehouseInterface = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProductInterface = new System.Windows.Forms.ToolStripMenuItem();
+            this.WarehousesInterface = new System.Windows.Forms.ToolStripMenuItem();
+            this.exit = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RegistrationInterface,
+            this.CustomerInterface,
+            this.WarehouseInterface,
+            this.ProductInterface,
+            this.WarehousesInterface,
+            this.exit});
+            this.menuStrip1.Location = new System.Drawing.Point(139, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(536, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // RegistrationInterface
+            // 
+            this.RegistrationInterface.BackColor = System.Drawing.Color.Goldenrod;
+            this.RegistrationInterface.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RegistrationInterface.Name = "RegistrationInterface";
+            this.RegistrationInterface.Size = new System.Drawing.Size(88, 20);
+            this.RegistrationInterface.Text = "Manage User";
+            this.RegistrationInterface.Click += new System.EventHandler(this.manageUserToolStripMenuItem_Click);
+            // 
+            // CustomerInterface
+            // 
+            this.CustomerInterface.BackColor = System.Drawing.Color.Goldenrod;
+            this.CustomerInterface.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CustomerInterface.Name = "CustomerInterface";
+            this.CustomerInterface.Size = new System.Drawing.Size(71, 20);
+            this.CustomerInterface.Text = "Customer";
+            this.CustomerInterface.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // WarehouseInterface
+            // 
+            this.WarehouseInterface.BackColor = System.Drawing.Color.Goldenrod;
+            this.WarehouseInterface.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.WarehouseInterface.Name = "WarehouseInterface";
+            this.WarehouseInterface.Size = new System.Drawing.Size(67, 20);
+            this.WarehouseInterface.Text = "Category";
+            this.WarehouseInterface.Click += new System.EventHandler(this.itemToolStripMenuItem_Click);
+            // 
+            // ProductInterface
+            // 
+            this.ProductInterface.BackColor = System.Drawing.Color.Goldenrod;
+            this.ProductInterface.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ProductInterface.Name = "ProductInterface";
+            this.ProductInterface.Size = new System.Drawing.Size(61, 20);
+            this.ProductInterface.Text = "Product";
+            this.ProductInterface.Click += new System.EventHandler(this.orderToolStripMenuItem_Click);
+            // 
+            // WarehousesInterface
+            // 
+            this.WarehousesInterface.BackColor = System.Drawing.Color.Goldenrod;
+            this.WarehousesInterface.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.WarehousesInterface.Name = "WarehousesInterface";
+            this.WarehousesInterface.Size = new System.Drawing.Size(83, 20);
+            this.WarehousesInterface.Text = "Warehouses";
+            this.WarehousesInterface.Click += new System.EventHandler(this.WarehousesInterface_Click);
+            // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.Goldenrod;
+            this.exit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(38, 20);
+            this.exit.Text = "Exit";
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 84);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(707, 362);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(127, 24);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(25, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(421, 27);
             this.label1.TabIndex = 2;
             this.label1.Text = "INVENTORY MANAGEMENT SYSTEM";
             // 
-            // menuStrip1
+            // panel1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageUserToolStripMenuItem,
-            this.productToolStripMenuItem,
-            this.itemToolStripMenuItem,
-            this.orderToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(707, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // manageUserToolStripMenuItem
-            // 
-            this.manageUserToolStripMenuItem.Name = "manageUserToolStripMenuItem";
-            this.manageUserToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.manageUserToolStripMenuItem.Text = "Manage User";
-            this.manageUserToolStripMenuItem.Click += new System.EventHandler(this.manageUserToolStripMenuItem_Click);
-            // 
-            // productToolStripMenuItem
-            // 
-            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.productToolStripMenuItem.Text = "Customer";
-            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
-            // 
-            // itemToolStripMenuItem
-            // 
-            this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
-            this.itemToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.itemToolStripMenuItem.Text = "Category";
-            this.itemToolStripMenuItem.Click += new System.EventHandler(this.itemToolStripMenuItem_Click);
-            // 
-            // orderToolStripMenuItem
-            // 
-            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.orderToolStripMenuItem.Text = "Order";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(683, 342);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Location = new System.Drawing.Point(107, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(474, 51);
+            this.panel1.TabIndex = 5;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.ClientSize = new System.Drawing.Size(707, 441);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
@@ -125,20 +165,23 @@ namespace Inventory_Management_System_017
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem manageUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem itemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem orderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RegistrationInterface;
+        private System.Windows.Forms.ToolStripMenuItem CustomerInterface;
+        private System.Windows.Forms.ToolStripMenuItem WarehouseInterface;
+        private System.Windows.Forms.ToolStripMenuItem ProductInterface;
+        private System.Windows.Forms.ToolStripMenuItem WarehousesInterface;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem exit;
     }
 }

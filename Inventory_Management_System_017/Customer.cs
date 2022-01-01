@@ -87,7 +87,7 @@ namespace Inventory_Management_System_017
 
         private void Customer_Load(object sender, EventArgs e)
         {
-            label2.Text = "";
+            clr();
             populatedGridView();
         }
 

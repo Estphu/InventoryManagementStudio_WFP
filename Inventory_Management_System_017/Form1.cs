@@ -22,8 +22,10 @@ namespace Inventory_Management_System_017
 
         private void newRegistration_lbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             NewRegistration nr = new NewRegistration();
-            nr.ShowDialog();
+            nr.Closed += (s, args) => this.Hide();
+            nr.Show();
         }
 
         private void login_btn_Click(object sender, EventArgs e)
