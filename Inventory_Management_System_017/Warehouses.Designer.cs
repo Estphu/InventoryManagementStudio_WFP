@@ -47,7 +47,7 @@ namespace Inventory_Management_System_017
             this.btnKarachiWH.Location = new System.Drawing.Point(118, 105);
             this.btnKarachiWH.Name = "btnKarachiWH";
             this.btnKarachiWH.Size = new System.Drawing.Size(169, 86);
-            this.btnKarachiWH.TabIndex = 0;
+            this.btnKarachiWH.TabIndex = 1;
             this.btnKarachiWH.Text = "KARACHI";
             this.btnKarachiWH.UseVisualStyleBackColor = false;
             this.btnKarachiWH.Click += new System.EventHandler(this.btnKarachiWH_Click);
@@ -60,7 +60,7 @@ namespace Inventory_Management_System_017
             this.btnQuettaWH.Location = new System.Drawing.Point(118, 213);
             this.btnQuettaWH.Name = "btnQuettaWH";
             this.btnQuettaWH.Size = new System.Drawing.Size(169, 86);
-            this.btnQuettaWH.TabIndex = 0;
+            this.btnQuettaWH.TabIndex = 3;
             this.btnQuettaWH.Text = "QUETTA";
             this.btnQuettaWH.UseVisualStyleBackColor = false;
             this.btnQuettaWH.Click += new System.EventHandler(this.btnQuettaWH_Click);
@@ -73,7 +73,7 @@ namespace Inventory_Management_System_017
             this.btnIslamabadWH.Location = new System.Drawing.Point(315, 213);
             this.btnIslamabadWH.Name = "btnIslamabadWH";
             this.btnIslamabadWH.Size = new System.Drawing.Size(169, 86);
-            this.btnIslamabadWH.TabIndex = 1;
+            this.btnIslamabadWH.TabIndex = 4;
             this.btnIslamabadWH.Text = "ISLAMABAD";
             this.btnIslamabadWH.UseVisualStyleBackColor = false;
             this.btnIslamabadWH.Click += new System.EventHandler(this.btnIslamabadWH_Click);
@@ -86,7 +86,7 @@ namespace Inventory_Management_System_017
             this.btnLahoreWH.Location = new System.Drawing.Point(315, 105);
             this.btnLahoreWH.Name = "btnLahoreWH";
             this.btnLahoreWH.Size = new System.Drawing.Size(169, 86);
-            this.btnLahoreWH.TabIndex = 0;
+            this.btnLahoreWH.TabIndex = 2;
             this.btnLahoreWH.Text = "LAHORE";
             this.btnLahoreWH.UseVisualStyleBackColor = false;
             this.btnLahoreWH.Click += new System.EventHandler(this.btnLahoreWH_Click);
@@ -109,7 +109,7 @@ namespace Inventory_Management_System_017
             this.button1.Location = new System.Drawing.Point(1, -3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(55, 30);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 5;
             this.button1.Text = "<-";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);

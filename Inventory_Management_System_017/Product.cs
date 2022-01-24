@@ -25,31 +25,82 @@ namespace Inventory_Management_System_017
                 SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=InventoryProject00;Integrated Security=True");
                 String qr = "insert into tblProduct(ProductCode,ProductName,ProductAmount,ProductStatus,SelectedWarehouse) values (@ProductCode,@ProductName,@ProductAmount,@ProductStatus,@SelectedWarehouse)";
                 SqlCommand cmd = new SqlCommand(qr, conn);
-                cmd.Parameters.AddWithValue("@ProductCode", Convert.ToInt32(txtProductCode.Text));
-                cmd.Parameters.AddWithValue("@ProductName", txtProductName.Text);
-                cmd.Parameters.AddWithValue("@ProductAmount", Convert.ToInt32(txtProductAmount.Text));
-                if (chkActive.Checked) 
-                {
-                    cmd.Parameters.AddWithValue("@ProductStatus", "Active");
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@ProductStatus", "Inactive");
-                }
-                cmd.Parameters.AddWithValue("@SelectedWarehouse", selectedWarehouse.SelectedValue.ToString());
-                int i = 0;
+                // CHECK FOR LAHORE WAREHOUSE VOLUME
                 conn.Open();
-                i = cmd.ExecuteNonQuery();
-                conn.Close();
-                if (i >= 0)
+                SqlCommand qrLahore = new SqlCommand("set nocount on; select ID, ProductCode, ProductName, ProductAmount, ProductStatus, SelectedWarehouse from tblProduct where SelectedWarehouse='Lahore';", conn);
+                SqlDataAdapter daLahore = new SqlDataAdapter(qrLahore);
+                DataTable dtLahore = new DataTable();
+                daLahore.Fill(dtLahore);
+                if (selectedWarehouse.SelectedValue.ToString() == "Lahore" && dtLahore.Rows.Count > 15)
                 {
-                    MessageBox.Show("New Product Added Sucessfully");
-                    populatedGridView();
+                    MessageBox.Show("Lahore Warehouse is full");
                     clr();
                 }
-                else
+                conn.Close();
+                // CHECK FOR KARACHI WAREHOUSE VOLUME
+                conn.Open();
+                SqlCommand qrKarachi = new SqlCommand("set nocount on; select ID, ProductCode, ProductName, ProductAmount, ProductStatus, SelectedWarehouse from tblProduct where SelectedWarehouse='Karachi';", conn);
+                SqlDataAdapter daKarachi = new SqlDataAdapter(qrKarachi);
+                DataTable dtKarachi = new DataTable();
+                daKarachi.Fill(dtKarachi);
+                if (selectedWarehouse.SelectedValue.ToString() == "Karachi" && dtKarachi.Rows.Count > 2)
                 {
-                    MessageBox.Show("Failed");
+                    MessageBox.Show("Karachi Warehouse is full");
+                    clr();
+                }
+                conn.Close();
+                // CHECK FOR QUETTA WAREHOUSE VOLUME
+                conn.Open();
+                SqlCommand qrQuetta = new SqlCommand("set nocount on; select ID, ProductCode, ProductName, ProductAmount, ProductStatus, SelectedWarehouse from tblProduct where SelectedWarehouse='Quetta';", conn);
+                SqlDataAdapter daQuetta = new SqlDataAdapter(qrQuetta);
+                DataTable dtQuetta = new DataTable();
+                daQuetta.Fill(dtQuetta);
+                if (selectedWarehouse.SelectedValue.ToString() == "Quetta" && dtQuetta.Rows.Count > 10)
+                {
+                    MessageBox.Show("Quetta Warehouse is full");
+                    clr();
+                }
+                conn.Close();
+                // CHECK FOR ISLAMABAD WAREHOUSE VOLUME
+                conn.Open();
+                SqlCommand qrIslamabad = new SqlCommand("set nocount on; select ID, ProductCode, ProductName, ProductAmount, ProductStatus, SelectedWarehouse from tblProduct where SelectedWarehouse='Islamabad';", conn);
+                SqlDataAdapter daIslamabad = new SqlDataAdapter(qrIslamabad);
+                DataTable dtIslamabad = new DataTable();
+                daIslamabad.Fill(dtIslamabad);
+                if (selectedWarehouse.SelectedValue.ToString() == "Islamabad" && dtIslamabad.Rows.Count > 30)
+                {
+                    MessageBox.Show("Quetta Warehouse is full");
+                    clr();
+                }
+                conn.Close();
+                // IF ALL WAREHOUSE HAVE SPACE
+                if (dtLahore.Rows.Count <= 15 && dtKarachi.Rows.Count <= 2 & dtQuetta.Rows.Count <= 10 && dtIslamabad.Rows.Count <= 30) {
+                    cmd.Parameters.AddWithValue("@ProductCode", Convert.ToInt32(txtProductCode.Text));
+                    cmd.Parameters.AddWithValue("@ProductName", txtProductName.Text);
+                    cmd.Parameters.AddWithValue("@ProductAmount", Convert.ToInt32(txtProductAmount.Text));
+                    if (chkActive.Checked)
+                    {
+                        cmd.Parameters.AddWithValue("@ProductStatus", "Active");
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@ProductStatus", "Inactive");
+                    }
+                    cmd.Parameters.AddWithValue("@SelectedWarehouse", selectedWarehouse.SelectedValue.ToString());
+                    conn.Open();
+                    int i = 0;
+                    i = cmd.ExecuteNonQuery();
+                    conn.Close();
+                    if (i >= 0)
+                    {
+                        MessageBox.Show("New Product Added Sucessfully");
+                        populatedGridView();
+                        clr();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed");
+                    }
                 }
             }
             else
